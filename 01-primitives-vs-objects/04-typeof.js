@@ -1,0 +1,10 @@
+typeof "str";
+typeof 3;
+typeof true;
+typeof Symbol();
+typeof 9007199254740991n;
+typeof null;
+typeof undefined;
+typeof {};
+typeof [];
+typeof ((x) => x * 2);
