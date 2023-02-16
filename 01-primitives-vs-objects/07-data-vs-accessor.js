@@ -12,32 +12,34 @@ dog.name = "spot"; // throws an error in strict mode, otherwise fails silently
 // Accessor descriptors
 
 let coach = {
-	firstName: "andy",
-	lastName: "bolton",
+	name: {
+		first: "andy",
+		last: "bolton",
+	},
 };
 
-Object.defineProperty(coach, "fullName", {
+Object.defineProperty(coach.name, "full", {
 	get: function () {
-		return `${this.firstName} ${this.lastName}`;
+		return `${this.first} ${this.last}`;
 	},
 	set: function (value) {
-		[this.firstName, this.lastName] = value.split(" ");
+		[this.first, this.last] = value.split(" ");
 	},
 });
 
-console.log(coach.fullName);
+console.log(coach.name.full);
 
-coach.fullName = "imran bashir";
-console.log(coach.firstName, coach.lastName);
+coach.name.full = "imran bashir";
+console.log(coach.name.first, coach.name.last);
 
 // Can also be written like this...
-coach = {
-	firstName: "andy",
-	lastName: "bolton",
-	get fullName() {
-		return `${this.firstName} ${this.lastName}`;
+coach.name = {
+	first: "andy",
+	last: "bolton",
+	get full() {
+		return `${this.first} ${this.last}`;
 	},
-	set fullName(value) {
-		[this.firstName, this.lastName] = value.split(" ");
+	set full(value) {
+		[this.first, this.last] = value.split(" ");
 	},
 };

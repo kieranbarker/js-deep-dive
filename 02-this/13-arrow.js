@@ -2,7 +2,7 @@
 
 let timer = {
 	ms: 5000,
-	tick() {
+	tick: function () {
 		let interval = setInterval(function () {
 			console.log(this.ms);
 			if (this.ms > 0) {

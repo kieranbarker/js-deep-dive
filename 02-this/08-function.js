@@ -4,6 +4,6 @@ function Dog() {
 
 new Dog(); // an instance of the Dog "class"
 
-let obj = { Dog };
+let obj = { Dog: Dog };
 
 new obj.Dog(); // still an instance of the Dog "class"

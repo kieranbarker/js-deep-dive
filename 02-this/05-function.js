@@ -4,6 +4,6 @@ function getThis() {
 
 getThis(); // the global object (or undefined)
 
-let obj = { getThis };
+let obj = { getThis: getThis };
 
 obj.getThis(); // obj
